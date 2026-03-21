@@ -1,26 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700;900&display=swap");
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --orange: #FF6B00;
+  --orange-light: #FF8C00;
+  --black: #0A0A0A;
+  --dark: #111111;
+  --dark2: #1A1A1A;
+  --white: #FFFFFF;
+  --grey: #AAAAAA;
+  --red: #D62828;
+  --green: #22C55E;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-orange: var(--orange);
+  --color-orange-light: var(--orange-light);
+  --color-dark2: var(--dark2);
+  --color-dark: var(--dark);
+  --color-brand-black: var(--black);
+  --color-grey: var(--grey);
+  --color-brand-red: var(--red);
+  --color-brand-green: var(--green);
+  --font-bebas: "Bebas Neue", cursive;
+  --font-montserrat: "Montserrat", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Typography helpers ─────────────────────────────────── */
+.bebas {
+  font-family: "Bebas Neue", cursive;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 4px;
+}
+
+/* ── Section divider ────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #2a2a2a, transparent);
+}
+
+/* ── Sticky CTA spacer ──────────────────────────────────── */
+.sticky-spacer {
+  height: 72px;
+}
+
+/* ── Input / select focus ───────────────────────────────── */
+input:focus,
+select:focus {
+  outline: 2px solid var(--orange);
+  outline-offset: 0;
+}
+
+/* ── Section label (overline) ───────────────────────────── */
+.section-label {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--orange);
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* ── Section headline (Bebas) ───────────────────────────── */
+.section-title {
+  font-family: "Bebas Neue", cursive;
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.section-title .accent {
+  color: var(--orange);
+}
+
+/* ── Orange CTA button ──────────────────────────────────── */
+.btn-orange {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 540px;
+  background: var(--orange);
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 1.125rem;
+  padding: 18px 32px;
+  border-radius: 8px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 0 24px rgba(255, 107, 0, 0.25);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-orange:hover {
+  background: var(--orange-light);
+  transform: translateY(-2px);
+  box-shadow: 0 0 36px rgba(255, 107, 0, 0.45);
+}
+
+.btn-orange:active {
+  transform: scale(0.98);
+}
+
+/* ── Black CTA button (on orange bg) ───────────────────── */
+.btn-black {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #0A0A0A;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 1.125rem;
+  padding: 18px 32px;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, transform 0.15s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-black:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.btn-black:active {
+  transform: scale(0.98);
+}
+
+/* ── Card  orange accent ────────────────────────────────── */
+.card-orange {
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  border-top: 2px solid var(--orange);
+  border-radius: 10px;
+  padding: 20px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.card-orange:hover {
+  border-color: var(--orange);
+  box-shadow: 0 4px 24px rgba(255, 107, 0, 0.08);
+}
+
+.card-red {
+  background: #0f0f0f;
+  border: 1px solid #2a2a2a;
+  border-top: 2px solid var(--red);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* ── Max content width per CLAUDE.md ────────────────────── */
+.content-wrap {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ── Accordion ───────────────────────────────────────────── */
+.accordion-content {
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.3s ease;
+}
+
+/* ── Footer links ────────────────────────────────────────── */
+.footer-link {
+  font-size: 11px;
+  color: #444;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--orange);
+}
+
+/* ── Coaching upsell outline button ─────────────────────── */
+.calendly-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 540px;
+  border: 2px solid #fff;
+  color: #fff;
+  background: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 16px 28px;
+  border-radius: 8px;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+
+.calendly-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Vuce attribution ────────────────────────────────────── */
+.vuce-link:hover {
+  color: var(--orange) !important;
+}
+
+/* ── Pulse glow for CTA buttons ─────────────────────────── */
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 16px rgba(255, 107, 0, 0.25);
+  }
+
+  50% {
+    box-shadow: 0 0 36px rgba(255, 107, 0, 0.55);
+  }
+}
+
+@keyframes shine-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-15deg);
+  }
+
+  50%,
+  100% {
+    transform: translateX(200%) skewX(-15deg);
+  }
+}
+
+.btn-orange {
+  position: relative;
+  overflow: hidden;
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.btn-orange::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: translateX(-150%) skewX(-15deg);
+  animation: shine-sweep 3s ease-in-out infinite;
+}
+
+/* ── Marquee Animation ───────────────────────────────────── */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-around;
+  min-width: 100%;
+  animation: scroll-marquee 25s linear infinite;
+  gap: 2rem;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - 2rem));
+  }
 }
