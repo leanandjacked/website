@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lean & Jacked Fat Loss Blueprint
 
-## Getting Started
+This project is a high conversion landing page for the Lean & Jacked Fat Loss Blueprint by Zaid Shaikh. It is built using Next.js and Tailwind CSS. This application was developed by vuce.
 
-First, run the development server:
+## Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The codebase is organized following the Next.js App Router convention:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*   app/ : Contains all page routes and application layout logic.
+*   app/components/ : Consists of reusable UI components such as Hero, CaseStudies, and PriceSection.
+*   app/case-studies/ : Includes data and pages for detailed transformation stories.
+*   public/ : Stores static assets like images, videos, and icons.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Key Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1.  Conversion Optimized Hero: Targeted messaging and high quality video integration.
+2.  Interactive Case Studies: Portrait format transformation photos with detailed stories.
+3.  Calorie Calculator: Built in tool to engage prospects and provide immediate value.
+4.  Scarcity and Urgency: Countdown bars and limited stock indicators to drive action.
+5.  Social Proof: Dynamic marquee banners and detailed client testimonials.
 
-## Learn More
+## Development
 
-To learn more about Next.js, take a look at the following resources:
+Follow these steps to run the project locally.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1.  Clone the repository to your local machine.
+2.  Install the required dependencies using npm install.
+3.  Start the development server with npm run dev.
+4.  Access the application at http://localhost:3000.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Production Build
 
-## Deploy on Vercel
+To generate an optimized production build, run the following command:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+npm run build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The output will be available in the .next directory, ready for deployment.
+
+## Maintenance and Updates
+
+*   Content Updates: To modify case study data, edit app/case-studies/data.ts.
+*   Styling: Core styles and theme variables are defined in app/globals.css.
+*   Deployment: The project is optimized for deployment on the Vercel platform.
+
+Documentation created by vuce.
