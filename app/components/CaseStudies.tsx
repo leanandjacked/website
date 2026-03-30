@@ -34,17 +34,16 @@ export default function CaseStudies() {
       style={{ background: "var(--dark2)" }}
     >
       <div className="content-wrap px-4 md:px-0">
-        <p className="section-label mb-2 md:mb-3">In-Depth Case Studies</p>
+        <p className="section-label mb-2 md:mb-3">CLIENT RESULTS</p>
         <h2 className="bebas section-title mb-2 md:mb-3 text-[2.5rem] md:text-[3.5rem] leading-none">
-          The Real Stories.{" "}
-          <span style={{ color: "var(--orange)" }}>Unfiltered.</span>
+          Real People.{" "}
+          <span style={{ color: "var(--orange)" }}>Real Results.</span>
         </h2>
         <p
           className="text-[13px] md:text-[14px] leading-relaxed mb-8 md:mb-10 font-montserrat"
           style={{ color: "var(--grey)" }}
         >
-          Not just before/after photos. Read every detail  the challenges,
-          the turning points, the exact approach that worked.
+          No fake testimonials. No AI stock images. These are actual clients.
         </p>
 
         <div 

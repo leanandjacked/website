@@ -1,9 +1,9 @@
 const pains = [
-  "YouTube workouts that give you individual exercises but never a complete, connected system. No structure. No progression. No results.",
-  "Diets that don't work with Indian home food. Your family isn't cooking chicken breast and broccoli. Any plan that ignores this is dead on arrival.",
-  "Starting the gym, stopping, restarting. Same weight. Same frustration. Every few months. Because the program was never built for someone with your schedule.",
-  "Generic ₹999 products that hand you a template created for everyone  which means it's optimised for no one. Same calories, same meals, same plan regardless of your body, lifestyle, or goals.",
-  "1:1 coaching costs ₹10,000–₹20,000 a month  not realistic when you're a student, a young professional, or anyone building their life.",
+  "YouTube workouts that give you exercises but never a complete, connected system. No structure. No progression. No results.",
+  "Diets that don't work with Indian home food. Your family isn't cooking chicken breast and broccoli.",
+  "Starting the gym, stopping, restarting. Same weight. Same frustration. Every few months.",
+  "Generic ₹999 products same template for everyone, which means optimised for no one.",
+  "1:1 coaching costs ₹10,000–₹20,000 a month not realistic for most people.",
 ];
 
 export default function PainSection() {

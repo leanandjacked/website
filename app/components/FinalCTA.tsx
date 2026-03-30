@@ -1,18 +1,17 @@
-import Link from "next/link";
 import { ShieldCheck, ArrowRight, Lock, Zap, CheckCircle } from "lucide-react";
+import RazorpayButton from "./RazorpayButton";
 
 export default function FinalCTA() {
   return (
     <section className="py-16 md:py-20 text-center bg-[var(--dark2)]">
       <div className="content-wrap px-4 md:px-0">
-        <p className="section-label mb-2 md:mb-3">Last Chance</p>
+        <p className="section-label mb-2 md:mb-3">GET STARTED TODAY</p>
         <h2 className="bebas section-title mb-4 md:mb-5 text-[2.5rem] md:text-[3.5rem] leading-none">
           Ready to{" "}
           <span style={{ color: "var(--orange)" }}>Finally Start?</span>
         </h2>
         <p className="text-[14px] md:text-[15px] leading-relaxed mb-6 md:mb-8 font-montserrat text-[var(--grey)] max-w-[600px] mx-auto">
-          Everything you need to begin your transformation for less than a
-          single meal at a restaurant.
+          Everything you need to begin your transformation for less than a single meal at a restaurant.
         </p>
 
         {/* Guarantee */}
@@ -29,12 +28,9 @@ export default function FinalCTA() {
           </p>
         </div>
 
-        <Link
-          href="#buy"
-          className="btn-orange inline-flex w-full sm:w-auto text-[1.05rem] md:text-[1.15rem] py-3.5 md:py-4 px-6 md:px-8 items-center justify-center gap-2"
-        >
-          Get The Blueprint  ₹999 <ArrowRight className="w-5 h-5" />
-        </Link>
+        <div className="w-full sm:w-auto mx-auto max-w-[300px]">
+          <RazorpayButton />
+        </div>
 
         <div className="flex flex-wrap justify-center gap-4 text-[11px] md:text-[12px] text-[#555] mt-6 md:mt-8 font-montserrat items-center">
           <span className="flex items-center gap-1.5"><Lock className="w-3.5 h-3.5" /> Secure Payment</span>

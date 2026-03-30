@@ -20,7 +20,7 @@ export default function FailedIndustry() {
           className="text-[14px] md:text-[15px] text-gray-400 leading-relaxed mb-6 md:mb-8 font-montserrat"
           style={{ color: "var(--grey)" }}
         >
-          After receiving <strong>hundreds of DMs</strong> from students, working professionals, and men in their 30s and 40s  the message was always the same:
+          Every week, messages come in from students, working professionals, and men in their 30s and 40s and the message is always the same:
         </p>
 
         <blockquote
@@ -30,7 +30,7 @@ export default function FailedIndustry() {
             borderLeft: "4px solid var(--orange)",
           }}
         >
-          "Zaid, I want to change. But I can't afford ₹10,000-₹20,000 a month for coaching. I've tried everything. I don't even want to take my shirt off anymore."
+          "Zaid, I want to change. But I can't afford ₹10,000–₹20,000 a month for coaching. I've tried everything. I don't even want to take my shirt off anymore."
         </blockquote>
 
         <div
@@ -42,11 +42,11 @@ export default function FailedIndustry() {
           </p>
 
           <p className="m-0">
-            Young men losing confidence. Energy disappearing. <strong>Testosterone dropping. Libido gone. Depression creeping in</strong>  all tied to a body they felt they had no control over. Men in their 30s and 40s watching their health deteriorate while spending every waking hour providing for their families.
+            Young men losing confidence. Energy disappearing. <strong>Testosterone dropping. Libido gone. Depression creeping in</strong> all tied to a body they felt they had no control over. Men in their 30s and 40s watching their health deteriorate while spending every waking hour providing for their families.
           </p>
 
           <p className="m-0">
-            That is why this blueprint exists. Not to sell a product. <strong>To give every serious person access to a system that actually works</strong>  at a price that removes every excuse.
+            That's why this package exists. Not to sell a product. <strong>To give every serious person access to a system that actually works</strong> at a price that removes every excuse.
           </p>
         </div>
 

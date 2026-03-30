@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import RazorpayButton from "./RazorpayButton";
 
 const tags = ["No Expensive Coaching", "No Foreign Diets", "No Guesswork"];
 
@@ -50,9 +49,9 @@ export default function SolutionSection() {
           ))}
         </div>
 
-        <Link href="#buy" className="btn-orange w-full max-w-[400px] flex items-center justify-center gap-2 mx-auto">
-          Get Instant Access for ₹999 <ArrowRight className="w-5 h-5" />
-        </Link>
+        <div className="w-full max-w-[400px] mx-auto flex items-center justify-center">
+          <RazorpayButton />
+        </div>
       </div>
     </section>
   );

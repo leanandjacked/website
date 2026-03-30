@@ -1,3 +1,5 @@
+import VuceBanner from "./VuceBanner";
+
 export default function Footer() {
   return (
     <footer
@@ -70,25 +72,7 @@ export default function Footer() {
       </div>
 
       {/* Vuce attribution */}
-      <p
-        style={{
-          fontSize: "11px",
-          color: "#2a2a2a",
-          fontFamily: "Montserrat, sans-serif",
-          letterSpacing: "0.5px",
-        }}
-      >
-        Built with love at{" "}
-        <a
-          href="https://vuce.in"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#2a2a2a", transition: "color 0.2s" }}
-          className="vuce-link"
-        >
-          Vuce.in
-        </a>
-      </p>
+      <VuceBanner />
     </footer>
   );
 }

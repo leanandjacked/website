@@ -2,13 +2,11 @@ import { Camera } from "lucide-react";
 
 const coachStory = [
   "I wasn't always the guy who knew what he was doing in the gym.",
-  "In college, I was bullied. That was the moment I decided  enough. I needed to change. Not for anyone else. For myself.",
-  "So I started going to the gym. And something happened I didn't expect. The gym didn't just change my body. It changed everything. It gave me discipline when I had none. Confidence when I had none. It taught me to trust my own decisions and take control of my own life. It turned me from a boy into a man.",
-  "But I was still lost when it came to actual training. Because the fitness industry is full of garbage. Six-day programs. Two hours of cardio. Dozens of supplements. Influencer routines that are impossible to follow for anyone with a real life.",
-  "So I did what engineers do. I researched. I tested. I analysed. On myself, obsessively, for years.",
-  "After completing my engineering degree, I got certified as a personal trainer. I coached in person and helped over 100 individuals transform their bodies. But my time and space were limited  and I knew my methods needed to reach more people.",
-  "That's when I took everything online. In the last year alone, I've helped 50+ busy students and working professionals  including surgeons, engineers, and corporate executives  get lean, build muscle, and fix real health issues. Without spending hours at the gym. Without eating boring food. Without being misled by influencer nonsense.",
-  "This blueprint is built on everything I've learned  so you don't have to figure it out the hard way like I did.",
+  "In college, I was bullied. That was the moment I decided enough. I needed to change. Not for anyone else. For myself. The gym didn't just change my body. It changed everything. It gave me discipline when I had none. Confidence when I had none. It turned me from a boy into a man.",
+  "But I was still lost when it came to actual training. The fitness industry is full of garbage. Six-day programs. Two hours of cardio. Dozens of supplements. Influencer routines that are impossible to follow for anyone with a real life.",
+  "So I did what engineers do. I researched. I tested. I analysed. On myself, obsessively, for years until I arrived at a system that delivers maximum results with minimum time, zero cardio, and no restrictive dieting.",
+  "After completing my engineering degree, I got certified as a personal trainer. I've now taken 50+ clients through this system engineering students, surgeons, corporate executives, and everyday working professionals helping them get lean, build muscle, and fix real health markers.",
+  "This package is built on everything I've learned so you don't have to figure it out the hard way like I did.",
 ];
 
 export default function CoachSection() {

@@ -1,17 +1,19 @@
+import { Check, X } from "lucide-react";
+
 const yesItems = [
-  "You're a student or beginner who wants to finally start losing fat the right way",
-  "You train less than 3 hours a week or need a program that fits into a crazy work, job, or career schedule",
+  "You're a student or working professional who wants to finally lose fat the right way",
+  "You train less than 3 hours a week or need a program that fits around exams, shifts, or a demanding job",
   "You eat Indian home food and need a diet that actually fits your real life",
   "You're tired of confusion and want one clear, complete system to follow from day one",
-  "You want to understand what's happening inside your body  not just follow random advice",
-  "You are ready to commit and execute consistently for at least 8 weeks",
+  "You want to understand what's happening inside your body not just follow random advice",
+  "You are ready to commit and execute consistently for 90 days",
 ];
 
 const noItems = [
   "You want a flexible plan with zero structure or accountability",
   "You're looking for shortcuts, fat loss pills, or magic hacks",
   "You're not willing to track what you eat for at least 4 weeks",
-  "You want someone to personally coach you week by week  scroll down for that offer",
+  "You want someone to personally coach you week by week scroll down for that offer",
 ];
 
 export default function IsThisForYou() {
@@ -43,14 +45,14 @@ export default function IsThisForYou() {
               className="flex items-center gap-2 mb-6 font-montserrat text-[11px] md:text-[12px] tracking-widest uppercase font-bold"
               style={{ color: "#22C55E" }}
             >
-              <span className="text-[13px] md:text-[14px]">✔</span> THIS IS FOR YOU IF:
+              <Check className="w-4 h-4" /> THIS IS FOR YOU IF:
             </div>
             {yesItems.map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 mb-4 md:mb-5"
               >
-                <span className="flex-shrink-0 text-[12px] font-bold mt-1" style={{ color: "#22C55E" }}>✔</span>
+                <Check className="flex-shrink-0 w-4 h-4 mt-1" style={{ color: "#22C55E" }} />
                 <span className="text-[14px] md:text-[15px] leading-relaxed font-montserrat" style={{ color: "#CCC" }}>{item}</span>
               </div>
             ))}
@@ -68,14 +70,14 @@ export default function IsThisForYou() {
               className="flex items-center gap-2 mb-6 font-montserrat text-[11px] md:text-[12px] tracking-widest uppercase font-bold"
               style={{ color: "var(--red)" }}
             >
-              <span className="text-[13px] md:text-[14px] inline-block rotate-45">+</span> THIS IS NOT FOR YOU IF:
+              <X className="w-4 h-4" /> THIS IS NOT FOR YOU IF:
             </div>
             {noItems.map((item, i) => (
               <div
                 key={i}
                 className="flex items-start gap-4 mb-4 md:mb-5"
               >
-                <span className="flex-shrink-0 text-[14px] font-bold mt-0.5 rotate-45" style={{ color: "var(--red)" }}>+</span>
+                <X className="flex-shrink-0 w-4 h-4 mt-1" style={{ color: "var(--red)" }} />
                 <span className="text-[14px] md:text-[15px] leading-relaxed font-montserrat" style={{ color: "#CCC" }}>{item}</span>
               </div>
             ))}

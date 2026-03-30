@@ -3,50 +3,56 @@ import Link from "next/link";
 const items = [
   {
     num: "01",
-    title: "CUSTOM NUTRITION PLAN - PERSONALISED TO YOU",
-    desc: <>Not a template. Built around <strong style={{ color: "var(--orange)" }}>your food preferences, your eating habits, your height + weight</strong>. Dal, roti, rice, paneer, eggs  real Indian food. Veg and non-veg versions. Delivered to your WhatsApp within 24 hours of purchase.</>,
-    value: "₹4,999",
+    title: "CUSTOM NUTRITION PLAN PERSONALISED TO YOU",
+    desc: <>Not a template. Built around <strong style={{ color: "var(--orange)" }}>your food preferences, your eating habits, your family kitchen</strong>. Dal, roti, rice, paneer, eggs real Indian food. Veg and non-veg versions. Delivered to your WhatsApp within 24 hours of purchase.</>,
+    value: "EXCLUSIVE",
   },
   {
     num: "02",
-    title: "3-PHASE NUTRITION SYSTEM  UPDATED EVERY 3 WEEKS",
-    desc: <>You receive <strong style={{ color: "var(--orange)" }}>3 updated diet plans across 60 days</strong>. Just like a 1:1 client, as you progress, calories and macros are recalibrated to ensure you don't hit a plateau or waste time.</>,
-    value: "₹2,999",
+    title: "3-PHASE NUTRITION SYSTEM UPDATED EVERY 3 WEEKS",
+    desc: <>You receive <strong style={{ color: "var(--orange)" }}>3 updated diet plans across 90 days</strong>, adjusted in real time based on your progress. Calories and macros recalculated as your body changes. No yo-yo dieting. No plateaus from a static plan.</>,
+    value: "UNIQUE",
   },
   {
     num: "03",
-    title: "MONTHLY 1:1 CALL WITH ZAID  15 MINUTES, EVERY MONTH",
-    desc: <>Do not ignore. Every month, a <strong style={{ color: "var(--orange)" }}>15-min consultation call</strong> with the coach  to review your progress, troubleshoot, and keep accountability. A single session costs ₹1,500-₹2,000 in India. You get one every month. Included.</>,
-    value: "₹5,000",
+    title: "MONTHLY 1:1 CALL WITH ZAID 15 MINUTES, EVERY MONTH",
+    desc: <>Direct access. Every month, a <strong style={{ color: "var(--orange)" }}>15-minute one-on-one call</strong> with the coach to review your progress, troubleshoot, and keep momentum. A single coaching call runs ₹1,500–₹3,000 in India. You get one every month.</>,
+    value: "INCLUDED",
   },
   {
     num: "04",
-    title: "8-WEEK HIT TRAINING PROGRAM  GYM & HOME",
-    desc: <>3 sessions per week. 45 minutes max. Compound lifts only. Gets harder as you get stronger. <strong style={{ color: "var(--orange)" }}>Both gym and home versions included</strong>. No gym? Home workout included.</>,
-    value: null,
+    title: "MONTHLY PROGRESS REVIEW TRAINING, NUTRITION & ACCOUNTABILITY",
+    desc: <>Every 4 weeks, Zaid personally reviews your training log, nutrition adherence, and progress data and sends you a <strong style={{ color: "var(--orange)" }}>written update with specific adjustments</strong> for the next phase. Not a bot. Not a support team. The coach himself, in writing, every month.</>,
+    value: "UNIQUE",
   },
   {
     num: "05",
-    title: "CALORIE & MACRO CALCULATOR",
-    desc: <>Find your exact daily calorie target in 2 minutes. No app needed. Built for your height, weight, activity levels, and goal. <strong style={{ color: "var(--orange)" }}>Step-by-step text on your macro setup and daily record.</strong></>,
+    title: "12-WEEK HIT TRAINING PROGRAM GYM & HOME",
+    desc: <>3 sessions per week. 45 minutes max. Compound lifts only. Gets harder as you get stronger. <strong style={{ color: "var(--orange)" }}>Both gym and home versions included</strong>. No junk volume. No wasted time.</>,
     value: null,
   },
   {
     num: "06",
-    title: "THE BLOODWORK BASICS GUIDE",
-    desc: <>The 5 blood markers every overweight person should check before starting any fat loss program  and what each one means for your progress. <strong style={{ color: "var(--orange)" }}>No other ₹999 product includes this. Anywhere.</strong></>,
-    value: "₹999",
+    title: "CALORIE & MACRO CALCULATOR",
+    desc: <>Find your exact daily calorie target in 2 minutes. No app needed. <strong style={{ color: "var(--orange)" }}>Built for your height, weight, activity level, and goal.</strong></>,
+    value: null,
   },
   {
     num: "07",
+    title: "THE BLOODWORK BASICS GUIDE",
+    desc: <>HbA1c, fasting insulin, Vitamin D, LDL, thyroid (TSH) the 5 markers that tell you more about your fat loss than any workout program. What each one means and what to do if yours are off. <strong style={{ color: "var(--orange)" }}>No other ₹999 product includes this. Anywhere.</strong></>,
+    value: "EXCLUSIVE",
+  },
+  {
+    num: "08",
     title: "BEGINNER BODYWEIGHT PROGRAM",
     desc: <>No gym? No problem. Full home workout plan. <strong style={{ color: "var(--orange)" }}>Zero equipment needed</strong>. Same HIT principles, adapted for home execution.</>,
     value: null,
   },
   {
-    num: "08",
+    num: "09",
     title: "THE SCIENCE BEHIND WHY IT WORKS",
-    desc: <>You won't just follow the plan blindly  you'll <strong style={{ color: "var(--orange)" }}>understand the principles</strong> behind every macro combination, rep range, and protocol we look after. Building the knowledge you keep for life.</>,
+    desc: <>You won't just follow the plan blindly you'll <strong style={{ color: "var(--orange)" }}>understand the principles</strong> behind every decision. Knowledge you keep for life.</>,
     value: null,
   },
 ];
@@ -64,7 +70,7 @@ export default function WhatsInside() {
         >
           Everything Inside
           <br />
-          <span style={{ color: "var(--orange)" }}>The Blueprint</span>
+          <span style={{ color: "var(--orange)" }}>The 90-Day Package</span>
         </h2>
         <p
           className="text-[14px] md:text-[15px] leading-relaxed mb-10 md:mb-14 font-montserrat"
@@ -124,8 +130,21 @@ export default function WhatsInside() {
           ))}
         </div>
 
-        <div className="mt-12 md:mt-16 text-center">
-          <Link href="#buy" className="btn-orange w-full max-w-[400px]">
+        <div className="mt-12 md:mt-16 text-center bg-[#0a0a0a] border border-[#222] rounded-xl p-8 md:p-10 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 to-yellow-500"></div>
+          <p className="text-[12px] md:text-[13px] font-bold tracking-widest uppercase mb-4 text-orange-500 font-montserrat">
+            THIS IS THE PART NO ONE ELSE DOES
+          </p>
+          <h3 className="bebas text-[2rem] md:text-[3rem] leading-tight text-white mb-6">
+            Every 4 Weeks, I Personally Review Your Progress and Send You an Update.
+          </h3>
+          <p className="text-[14px] md:text-[15px] leading-relaxed mb-6 font-montserrat text-gray-400">
+            Training log. Nutrition adherence. Progress data. Zaid reviews it all himself and sends you a written breakdown with exactly what to adjust for the next phase.
+          </p>
+          <p className="text-[14px] md:text-[15px] leading-relaxed mb-8 font-montserrat text-white font-medium">
+            You're not buying a PDF and disappearing into the void. You have someone in your corner for the entire 90 days.
+          </p>
+          <Link href="#buy" className="btn-orange w-full max-w-[400px] mx-auto text-[16px]">
             Get Access Now
           </Link>
         </div>

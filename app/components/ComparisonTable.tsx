@@ -1,45 +1,54 @@
+import React from "react";
+import { Check, X } from "lucide-react";
+
 const rows = [
   {
     feature: "Personalised nutrition plan",
-    free: "❌",
-    generic: "❌",
-    lj: "✔ Custom to your food & lifestyle",
+    free: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    generic: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    lj: "Custom to your food & lifestyle",
   },
   {
     feature: "Diet updated every 3 weeks",
-    free: "❌",
-    generic: "❌",
-    lj: "✔ Real-time macro adjustment",
+    free: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    generic: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    lj: "Real-time macro adjustment",
   },
   {
     feature: "Monthly 1:1 call with coach",
-    free: "❌",
-    generic: "❌",
-    lj: "✔ 15-min call every month",
+    free: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    generic: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    lj: "15-min call every month",
+  },
+  {
+    feature: "Personal monthly progress review",
+    free: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    generic: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    lj: "Written review every 4 weeks",
   },
   {
     feature: "Bloodwork basics guide",
-    free: "❌",
-    generic: "❌",
-    lj: "✔ Exclusive  no one else includes this",
+    free: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    generic: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    lj: "Exclusive no one else includes this",
   },
   {
     feature: "Built for students & busy professionals",
-    free: "❌",
-    generic: "❌",
-    lj: "✔ The only plan of its kind",
+    free: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    generic: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    lj: "The only plan of its kind",
   },
   {
     feature: "Indian home food compatible",
     free: "Partial",
     generic: "Partial",
-    lj: "✔ Dal, roti, rice, paneer, eggs",
+    lj: "Dal, roti, rice, paneer, eggs",
   },
   {
-    feature: "Proven on 100+ real transformations",
-    free: "❌",
-    generic: "❌",
-    lj: "✔ Students, surgeons, CEOs",
+    feature: "Proven across 50+ real clients",
+    free: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    generic: <X className="w-4 h-4 text-red-500 mx-auto" />,
+    lj: "Students, surgeons, CEOs, engineers",
   },
 ];
 
@@ -96,7 +105,7 @@ export default function ComparisonTable() {
                     background: "rgba(255, 102, 0, 0.05)",
                   }}
                 >
-                  Lean&nbsp;&&nbsp;Jacked
+                  Lean&nbsp;&&nbsp;Jacked 90-Day Package
                 </th>
               </tr>
             </thead>
@@ -116,13 +125,13 @@ export default function ComparisonTable() {
                   </td>
                   <td
                     className="p-1 md:p-4 text-[11px] md:text-[12px] font-bold text-center"
-                    style={{ color: row.free === "Partial" ? "var(--grey)" : "var(--red)" }}
+                    style={{ color: row.free === "Partial" ? "var(--grey)" : "inherit" }}
                   >
                     {row.free}
                   </td>
                   <td
                     className="p-1 md:p-4 text-[11px] md:text-[12px] font-bold text-center"
-                    style={{ color: row.generic === "Partial" ? "var(--grey)" : "var(--red)" }}
+                    style={{ color: row.generic === "Partial" ? "var(--grey)" : "inherit" }}
                   >
                     {row.generic}
                   </td>
@@ -138,14 +147,10 @@ export default function ComparisonTable() {
                       borderBottomRightRadius: i === rows.length - 1 ? "8px" : "0",
                     }}
                   >
-                    {row.lj.includes("✔") ? (
-                      <div className="flex items-start gap-1 md:gap-2">
-                        <span style={{ color: "#22C55E", flexShrink: 0 }}>✔</span>
-                        <span className="leading-tight">{row.lj.replace("✔ ", "")}</span>
-                      </div>
-                    ) : (
-                      row.lj
-                    )}
+                    <div className="flex items-start gap-1 md:gap-2">
+                      <Check className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
+                      <span className="leading-tight">{row.lj}</span>
+                    </div>
                   </td>
                 </tr>
               ))}

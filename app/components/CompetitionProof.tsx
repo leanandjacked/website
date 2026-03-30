@@ -2,6 +2,7 @@ const stats = [
   { val: "0", label: "Steroids" },
   { val: "3x", label: "Per Week" },
   { val: "45m", label: "Per Session" },
+  { val: "8-9%", label: "Body Fat" },
 ];
 
 export default function CompetitionProof() {
@@ -37,7 +38,7 @@ export default function CompetitionProof() {
           }}
         >
           <img
-            src="/ZAID at Competition.webp"
+            src="/zain-at-competition.jpg"
             alt="Zaid on stage at competition"
             style={{
               width: "100%",
@@ -53,7 +54,7 @@ export default function CompetitionProof() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns: "repeat(2, 1fr)",
             gap: "10px",
             marginBottom: "28px",
           }}
@@ -102,13 +103,9 @@ export default function CompetitionProof() {
             fontFamily: "Montserrat, sans-serif",
           }}
         >
-          I used this exact program to step on stage and compete against enhanced
-          bodybuilders in the 40+ kg transformation category. No steroids. No
-          diuretics. No 6-day training weeks. No chicken and rice every meal. Just
-          the system you&apos;re about to get.
+          I used this exact program to step on stage and compete against enhanced bodybuilders. No steroids. No diuretics. No 6-day training weeks. Three sessions a week.
           <br /><br />
-          If this protocol can build a competition-ready physique  it can absolutely
-          get you lean, healthy, and confident in your own body.
+          If this protocol can build a competition-ready physique it can absolutely get you lean, healthy, and confident in your own body.
         </p>
       </div>
     </section>

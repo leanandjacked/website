@@ -1,3 +1,5 @@
+import { Phone } from "lucide-react";
+
 export default function CoachingUpsell() {
   return (
     <section
@@ -14,8 +16,8 @@ export default function CoachingUpsell() {
           className="bebas section-title"
           style={{ marginBottom: "16px" }}
         >
-          Want Results{" "}
-          <span style={{ color: "var(--orange)" }}>10x Faster?</span>
+          Want Zaid Working With You{" "}
+          <span style={{ color: "var(--orange)" }}>Every Single Week?</span>
         </h2>
         <p
           style={{
@@ -26,11 +28,7 @@ export default function CoachingUpsell() {
             fontFamily: "Montserrat, sans-serif",
           }}
         >
-          If you want me to personally analyse your bloodwork, build your plan
-          around your body, and coach you every single week  I work with a small
-          number of 1:1 clients.
-          <br /><br />
-          This is not for everyone. Only for people who are ready to go all in.
+          If you want Zaid to personally analyse your bloodwork, build your plan around your body, and coach you with weekly accountability he works with a small number of 1:1 clients.
         </p>
 
         <div
@@ -47,6 +45,16 @@ export default function CoachingUpsell() {
         <p
           style={{
             fontSize: "13px",
+            color: "var(--grey)",
+            marginBottom: "12px",
+            fontFamily: "Montserrat, sans-serif",
+          }}
+        >
+          Early client pricing available for the first 10 clients only. Price increases after.
+        </p>
+        <p
+          style={{
+            fontSize: "13px",
             color: "var(--orange)",
             marginBottom: "24px",
             fontFamily: "Montserrat, sans-serif",
@@ -58,9 +66,9 @@ export default function CoachingUpsell() {
 
         <a
           href="https://calendly.com/YOURLINKHERE"
-          className="calendly-btn"
+          className="calendly-btn flex items-center justify-center gap-2"
         >
-          📞 Book Free 15-Min Fat Loss Diagnosis Call
+          <Phone className="w-4 h-4" /> Book Free 15-Min Fat Loss Diagnosis Call
         </a>
 
         <p
@@ -71,8 +79,7 @@ export default function CoachingUpsell() {
             fontFamily: "Montserrat, sans-serif",
           }}
         >
-          I&apos;ll tell you exactly what&apos;s blocking your progress  whether you work
-          with me or not.
+          I'll tell you exactly what's blocking your progress whether you work with me or not.
         </p>
       </div>
     </section>
