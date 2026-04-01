@@ -1,7 +1,11 @@
-import { Check, Zap } from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { Check, Zap, Play } from "lucide-react";
 import RazorpayButton from "./RazorpayButton";
 
 export default function Hero() {
+  const [isPlaying, setIsPlaying] = useState(false);
   return (
     <section
       className="py-16 md:py-20 text-center"
@@ -52,17 +56,35 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Video Sales Letter Placeholder */}
-        <div className="w-full aspect-[16/9] max-w-[800px] mx-auto mb-8 rounded-xl overflow-hidden border border-[#333] shadow-[0_0_40px_rgba(255,107,0,0.15)] bg-black">
-          <video
-            src="/vsl-placeholder.mp4"
-            controls
-            playsInline
-            className="w-full h-full object-cover"
-            poster="/og-image.jpg"
-          >
-            Your browser does not support the video tag.
-          </video>
+        {/* Custom Video Player with Aesthetic Overlay */}
+        <div className="w-full aspect-[9/16] max-w-[400px] md:max-w-[460px] mx-auto mb-8 rounded-xl overflow-hidden border border-[#333] shadow-[0_0_40px_rgba(255,107,0,0.15)] bg-black relative group">
+          {!isPlaying ? (
+            <div 
+              className="absolute inset-0 cursor-pointer flex items-center justify-center"
+              onClick={() => setIsPlaying(true)}
+            >
+              {/* Thumbnail Image */}
+              <img 
+                src="https://i.ytimg.com/vi/rre1yl_-yxo/hqdefault.jpg" 
+                alt="Transformation Video Thumbnail" 
+                className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+              />
+              {/* Play Button Overlay */}
+              <div className="relative z-10 w-20 h-20 rounded-full bg-orange-500/20 backdrop-blur-sm border border-orange-500/50 flex items-center justify-center group-hover:scale-110 group-hover:bg-orange-500/30 transition-all duration-300 shadow-[0_0_30px_rgba(255,107,0,0.4)]">
+                <div className="w-14 h-14 rounded-full bg-orange-500 flex items-center justify-center pl-1">
+                  <Play className="w-6 h-6 text-white fill-white" />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <iframe
+              src="https://www.youtube.com/embed/rre1yl_-yxo?autoplay=1&loop=1&playlist=rre1yl_-yxo&rel=0&modestbranding=1&vq=hd1080"
+              className="w-full h-full object-cover"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="Lean & Jacked Video Sales Letter"
+            ></iframe>
+          )}
         </div>
 
         <div className="w-full mx-auto max-w-[300px] flex items-center justify-center">
