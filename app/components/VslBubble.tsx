@@ -6,7 +6,6 @@ export default function VslBubble() {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     // Show after 3 seconds
@@ -36,24 +35,28 @@ export default function VslBubble() {
       onClick={toggleExpand}
     >
       {/* Video Container */}
-      <div className="relative w-full h-full overflow-hidden">
-        <video
-          ref={videoRef}
-          src="/vsl-placeholder.mp4"
-          autoPlay
-          loop
-          muted={isMuted}
-          playsInline
-          className="w-full h-full object-cover"
-        />
-
-        {/* Mute/Play indicators for mini mode */}
-        {!isExpanded && (
-          <div className="absolute inset-0 flex items-center justify-center bg-black/20 group hover:bg-black/40 transition-colors">
-            <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center animate-pulse">
-              <Play className="w-4 h-4 text-white fill-current" />
+      <div className="relative w-full h-full overflow-hidden bg-black">
+        {!isExpanded ? (
+          <>
+            <img 
+              src="https://i.ytimg.com/vi/rre1yl_-yxo/hqdefault.jpg" 
+              alt="Video Thumbnail" 
+              className="absolute inset-0 w-full h-full object-cover opacity-90"
+            />
+            {/* Play indicator for mini mode */}
+            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group hover:bg-black/40 transition-colors">
+              <div className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center animate-pulse">
+                <Play className="w-4 h-4 text-white fill-current pl-0.5" />
+              </div>
             </div>
-          </div>
+          </>
+        ) : (
+          <iframe
+            src={`https://www.youtube.com/embed/rre1yl_-yxo?autoplay=1&mute=${isMuted ? '1' : '0'}&loop=1&playlist=rre1yl_-yxo&rel=0&modestbranding=1&controls=0`}
+            className="w-full h-full border-0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            title="Lean & Jacked Video"
+          />
         )}
 
         {/* Close button */}
